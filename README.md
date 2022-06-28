@@ -1,6 +1,6 @@
 # MethaConcept
 
-Afin d'évaluer la pertinence environnementale, technique et économique d'un biodigesteur domestique ou non. Consultez le mode d'emploi afin de réaliser votre analyse.
+Afin d'évaluer la pertinence environnementale, technique et économique d'un biodigesteur domestique ou non.
 
 ## Mode d'emploi
 
