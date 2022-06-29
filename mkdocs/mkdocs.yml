@@ -1,4 +1,4 @@
-site_name: Votre nom de projet
+site_name: MethaConcept
 theme: readthedocs
 nav:
   - Accueil: 'index.md'
