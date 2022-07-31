@@ -28,7 +28,7 @@ Si la documentation est la notion du temps long, le compte rendu répond, quand 
 
 ### Documentations ouvertes
 
-Le compte rendu est à la documentation, ce que le chapitre est au livre. La documentation orchestre les différents [comptes rendu](), créée du lien entres eux.
+Le compte rendu est à la documentation, ce que le chapitre est au livre. La documentation orchestre les différents comptes rendu, créée du lien entres eux.
 Il est également essentiel de donner des éléments de contexte, sans ça vos documents ne seront être judicieusement utilisés.
 
 Sur ce modèle, ce site vous propose de trouver plus facilement l'information que vous recherchez et d'y contribuer.
@@ -37,7 +37,7 @@ Sur ce modèle, ce site vous propose de trouver plus facilement l'information qu
 
 ## Echanger et faire communauté
 
-Il est essentiels de pouvoir échanger autour d'un projet, ainsi de mettre à disposition des espaces tels qu'un forum ou un salon de discussion. Vous pouvez retrouvez les éventuels outils de mise à disposition ([Pad](), [Salon de discussion]())
+Il est essentiels de pouvoir échanger autour d'un projet, ainsi de mettre à disposition des espaces tels qu'un forum ou un salon de discussion. Vous pouvez retrouvez les éventuels outils de mise à disposition (Pad, Salon de discussion)
 
 ---
 
