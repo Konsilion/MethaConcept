@@ -13,3 +13,7 @@ parts:
   - caption: Communauté
     chapters:
     - file: docs/informations/premiers_pas
+    - file: docs/informations/pads
+    - file: docs/informations/chat
+    - file: docs/informations/visio
+    - file: docs/informations/contacts
