@@ -1,0 +1,64 @@
+p {
+    text-align: justify;
+}
+
+p a {
+color: #049ed1 !important;
+}
+
+p a:hover {
+color: black !important;
+}
+
+h1 {
+    color: #027d02 !important;
+    font-weight: bold;
+    text-transform: capitalize !important;
+    font-size: 40px;
+    
+}
+
+
+
+.md-content__button {
+display: none;
+}
+
+
+
+h2 {
+    font-weight: bold;
+    text-transform: uppercase !important;
+    font-size: 25px;
+}
+
+
+
+/* Code blocks */
+pre, code, .md-source {
+    background-color: #e3fffe !important;
+}
+
+ 
+/* tables on the site have excessive spacing */
+
+.table p {
+	margin-bottom: 0;
+}
+.table td {
+    padding-bottom: 0.25rem;
+    padding-top:    0.25rem;
+    padding-left:   0.5rem;
+    padding-right:  0.5rem;
+}
+
+
+/* -------------------------------------------
+            SIDE NAV OPTIONS
+------------------------------------------- */
+
+#site-navigation {
+	background-color: #f7f7f7;
+    border-right-width: 1px;
+}
+

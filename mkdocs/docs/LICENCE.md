@@ -1,5 +1,0 @@
-# Creative Commons
-
----
-
-# Open source

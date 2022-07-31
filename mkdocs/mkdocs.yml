@@ -1,8 +1,0 @@
-site_name: MethaConcept
-theme: readthedocs
-nav:
-  - Accueil: 'index.md'
-  - Premier chapitre:
-    - Page 1: 'page.md'
-  - Licence: 'LICENCE.md'
-  
