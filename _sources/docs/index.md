@@ -6,10 +6,18 @@ hide:
 
 # **Rassembler et diffusez toutes vos documentations scientifiques.**
 
-(Description à renseigner ici)
+*L'outil Konnect vous simplifiera la vie pour créer vos documentations, rapports, etc.*
 
 ---
 
-**Pas très familié.es avec ces notions et outils de coopération ?** 
+<br><br><br>
 
-<br><a href="./informations/premiers_pas/" title="home-link" class="md-button">On vous dit tout !</a
+**Pas très familié(e) avec ces notions et outils de coopération ?** 
+
+[On vous dit tout](./informations/premiers_pas)
+
+<br><br><br>
+
+---
+
+<img style="display: right; margin: 0 auto;" src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png" width="20%">

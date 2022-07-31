@@ -8,9 +8,7 @@ Ce document est régi par les termes de la licence juridique [Creative Commons C
 
 ---
 
-
 <style>
-  body {text-align: justify}
   .md-content__button {
     display: none;
   }

@@ -9,7 +9,7 @@ hide:
 
 ---
 
-###### Ajouter une instance (HedgeDoc, CodiMD, etc.) :
+* Ajouter une instance (HedgeDoc, CodiMD, etc.) :
 
 ```<iframe width="100%" height="550" src="https://lien.pad.fr"></iframe>```
 

@@ -9,7 +9,7 @@ hide:
 
 ---
 
-###### Ajouter une instance (Discord, RocketChat, etc) :
+* Ajouter une instance (Discord, RocketChat, etc) :
 
 ```<iframe width="100%" height="550" src="https://lien.chat.fr"></iframe>```
 
