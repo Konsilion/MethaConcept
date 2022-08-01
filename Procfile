@@ -1,1 +1,1 @@
-web: cd ./Mercury && mercury run
+web: sh -c 'cd ./Mercury/ && mercury run'
