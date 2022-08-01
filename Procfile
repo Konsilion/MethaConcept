@@ -1,1 +1,1 @@
-web: sh -c mercury run
+web: mercury run
