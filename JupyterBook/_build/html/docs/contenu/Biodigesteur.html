@@ -209,7 +209,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/konsilion/MethaConcept/master?urlpath=tree/JupyterBook/docs/contenu/Biodigesteur.ipynb"
+        <a href="https://mybinder.org/v2/gh/konsilion/MethaConcept/dev?urlpath=tree/JupyterBook/docs/contenu/Biodigesteur.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -223,6 +223,24 @@ title="Launch on Binder"
   </span>
 <span class="headerbtn__text-container">Binder</span>
 </a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
 
       </li>
       
@@ -418,8 +436,86 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="dimensionnez-votre-biodigesteur-domestique">
 <h1>Dimensionnez votre biodigesteur domestique<a class="headerlink" href="#dimensionnez-votre-biodigesteur-domestique" title="Permalink to this headline">#</a></h1>
 <p>Ce document est régi par les termes de la licence juridique <a class="reference external" href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr">Creative Commons CC-BY-SA 4.0</a></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To auto-exclude all files outside of your table of contents, see :::</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>and . :::</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The default behaviour of cache is now to run in the local directory. This is a change from v0.7. :::</p>
+</div>
+</div>
+</div>
 <hr class="docutils" />
+<ul class="simple">
+<li><p>Pour commencer, téléchargez le tableur</p></li>
+</ul>
+<div class="cell tag_hide_input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import des donnees calc</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><a class="reference external" href="https://konsilion.fr/wp/wp-content/uploads/2022/07/MetaConcept.xlsx">Lien de téléchargements WEB</a></p>
+<hr class="docutils" />
+<ol class="simple">
+<li><p>Une fois le tableur remplis, vous pouvez le reverser dans la machine.</p></li>
+</ol>
+<div class="cell tag_hide_input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uploader</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FileUpload</span><span class="p">(</span>
+    <span class="n">accept</span><span class="o">=</span><span class="s1">&#39;.xlsx&#39;</span><span class="p">,</span>  <span class="c1"># Accepted file extension e.g. &#39;.txt&#39;, &#39;.pdf&#39;, &#39;image/*&#39;, &#39;image/*,.pdf&#39;</span>
+    <span class="n">multiple</span><span class="o">=</span><span class="kc">False</span>  <span class="c1"># True to accept multiple files upload else False</span>
+<span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">uploader</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "5a6f14ee4abb41bc98ff4f089bf54be8"}
+</script></div>
+</div>
+<div class="cell tag_hide_input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uploaded_file</span> <span class="o">=</span> <span class="n">uploader</span><span class="o">.</span><span class="n">value</span><span class="p">[</span><span class="s1">&#39;MetaConcept.xlsx&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="nn">/tmp/ipykernel_258028/2066444861.py</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">uploaded_file</span> <span class="o">=</span> <span class="n">uploader</span><span class="o">.</span><span class="n">value</span><span class="p">[</span><span class="s1">&#39;MetaConcept.xlsx&#39;</span><span class="p">]</span>
+
+<span class="ne">KeyError</span>: &#39;MetaConcept.xlsx&#39;
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell tag_hide_input tag_remove_input docutils container">
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">/tmp/ipykernel_253122/663140646.py</span> in <span class="ni">&lt;cell line: 29&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">27</span>         <span class="nb">globals</span><span class="p">()[</span><span class="n">df</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]]</span><span class="o">=</span><span class="n">dfi</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">decimals</span> <span class="o">=</span> <span class="mi">4</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">28</span> 
+<span class="ne">---&gt; </span><span class="mi">29</span> <span class="n">variable_creation</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">30</span> 
+<span class="g g-Whitespace">     </span><span class="mi">31</span> <span class="k">def</span> <span class="nf">pd_df_mef</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="n">nb_round</span><span class="p">):</span>
+
+<span class="ne">NameError</span>: name &#39;filename&#39; is not defined
+</pre></div>
+</div>
+</div>
 </div>
 <section id="les-intrants">
 <h2>Les intrants<a class="headerlink" href="#les-intrants" title="Permalink to this headline">#</a></h2>
@@ -431,60 +527,15 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><style type="text/css">
-#T_b4d27_row0_col0, #T_b4d27_row1_col0, #T_b4d27_row2_col0 {
-  font-weight: ;
-  background-color: white;
-  color: ;
-}
-</style>
-<table id="T_b4d27">
-  <thead>
-    <tr>
-      <th id="T_b4d27_level0_col0" class="col_heading level0 col0" >Designation intrant</th>
-      <th id="T_b4d27_level0_col1" class="col_heading level0 col1" >Quantité</th>
-      <th id="T_b4d27_level0_col2" class="col_heading level0 col2" >%MS</th>
-      <th id="T_b4d27_level0_col3" class="col_heading level0 col3" >%MO</th>
-      <th id="T_b4d27_level0_col4" class="col_heading level0 col4" >%CH4</th>
-      <th id="T_b4d27_level0_col5" class="col_heading level0 col5" >Nm3 CH4 / tMO</th>
-      <th id="T_b4d27_level0_col6" class="col_heading level0 col6" >Chaleur spécifique</th>
-      <th id="T_b4d27_level0_col7" class="col_heading level0 col7" >%H2O</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td id="T_b4d27_row0_col0" class="data row0 col0" >Dejection humaine</td>
-      <td id="T_b4d27_row0_col1" class="data row0 col1" >300</td>
-      <td id="T_b4d27_row0_col2" class="data row0 col2" >22</td>
-      <td id="T_b4d27_row0_col3" class="data row0 col3" >85</td>
-      <td id="T_b4d27_row0_col4" class="data row0 col4" >55</td>
-      <td id="T_b4d27_row0_col5" class="data row0 col5" >220</td>
-      <td id="T_b4d27_row0_col6" class="data row0 col6" >3300</td>
-      <td id="T_b4d27_row0_col7" class="data row0 col7" >6</td>
-    </tr>
-    <tr>
-      <td id="T_b4d27_row1_col0" class="data row1 col0" >Epluchure</td>
-      <td id="T_b4d27_row1_col1" class="data row1 col1" >146</td>
-      <td id="T_b4d27_row1_col2" class="data row1 col2" >22</td>
-      <td id="T_b4d27_row1_col3" class="data row1 col3" >85</td>
-      <td id="T_b4d27_row1_col4" class="data row1 col4" >55</td>
-      <td id="T_b4d27_row1_col5" class="data row1 col5" >220</td>
-      <td id="T_b4d27_row1_col6" class="data row1 col6" >3300</td>
-      <td id="T_b4d27_row1_col7" class="data row1 col7" >6</td>
-    </tr>
-    <tr>
-      <td id="T_b4d27_row2_col0" class="data row2 col0" >Eaux usées</td>
-      <td id="T_b4d27_row2_col1" class="data row2 col1" >446</td>
-      <td id="T_b4d27_row2_col2" class="data row2 col2" >0</td>
-      <td id="T_b4d27_row2_col3" class="data row2 col3" >0</td>
-      <td id="T_b4d27_row2_col4" class="data row2 col4" >0</td>
-      <td id="T_b4d27_row2_col5" class="data row2 col5" >0</td>
-      <td id="T_b4d27_row2_col6" class="data row2 col6" >4180</td>
-      <td id="T_b4d27_row2_col7" class="data row2 col7" >1</td>
-    </tr>
-  </tbody>
-</table>
-</div></div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">/tmp/ipykernel_253122/1895691012.py</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">pd_df_mef</span><span class="p">(</span><span class="n">tab_intrant</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;pd_df_mef&#39; is not defined
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="les-informations-digesteurs">
@@ -497,182 +548,15 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><style type="text/css">
-#T_61a32_row0_col0, #T_61a32_row1_col0, #T_61a32_row2_col0, #T_61a32_row3_col0, #T_61a32_row4_col0, #T_61a32_row5_col0, #T_61a32_row6_col0, #T_61a32_row7_col0, #T_61a32_row8_col0, #T_61a32_row9_col0, #T_61a32_row10_col0, #T_61a32_row11_col0, #T_61a32_row12_col0, #T_61a32_row13_col0, #T_61a32_row14_col0, #T_61a32_row15_col0, #T_61a32_row16_col0, #T_61a32_row17_col0, #T_61a32_row18_col0, #T_61a32_row19_col0, #T_61a32_row20_col0, #T_61a32_row21_col0, #T_61a32_row22_col0, #T_61a32_row23_col0, #T_61a32_row24_col0, #T_61a32_row25_col0 {
-  font-weight: ;
-  background-color: white;
-  color: ;
-}
-</style>
-<table id="T_61a32">
-  <thead>
-    <tr>
-      <th id="T_61a32_level0_col0" class="col_heading level0 col0" >Informations</th>
-      <th id="T_61a32_level0_col1" class="col_heading level0 col1" > </th>
-      <th id="T_61a32_level0_col2" class="col_heading level0 col2" >Valeur</th>
-      <th id="T_61a32_level0_col3" class="col_heading level0 col3" >Unité</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td id="T_61a32_row0_col0" class="data row0 col0" >Diamètre</td>
-      <td id="T_61a32_row0_col1" class="data row0 col1" ></td>
-      <td id="T_61a32_row0_col2" class="data row0 col2" >70.00</td>
-      <td id="T_61a32_row0_col3" class="data row0 col3" >cm</td>
-    </tr>
-    <tr>
-      <td id="T_61a32_row1_col0" class="data row1 col0" >Hauteur</td>
-      <td id="T_61a32_row1_col1" class="data row1 col1" ></td>
-      <td id="T_61a32_row1_col2" class="data row1 col2" >70.00</td>
-      <td id="T_61a32_row1_col3" class="data row1 col3" >cm</td>
-    </tr>
-    <tr>
-      <td id="T_61a32_row2_col0" class="data row2 col0" >Stockage biogaz % du volume de digestion</td>
-      <td id="T_61a32_row2_col1" class="data row2 col1" ></td>
-      <td id="T_61a32_row2_col2" class="data row2 col2" >10.00</td>
-      <td id="T_61a32_row2_col3" class="data row2 col3" >%</td>
-    </tr>
-    <tr>
-      <td id="T_61a32_row3_col0" class="data row3 col0" >Production attendues % du BMP max</td>
-      <td id="T_61a32_row3_col1" class="data row3 col1" ></td>
-      <td id="T_61a32_row3_col2" class="data row3 col2" >1.00</td>
-      <td id="T_61a32_row3_col3" class="data row3 col3" >%</td>
-    </tr>
-    <tr>
-      <td id="T_61a32_row4_col0" class="data row4 col0" >Température digestion</td>
-      <td id="T_61a32_row4_col1" class="data row4 col1" ></td>
-      <td id="T_61a32_row4_col2" class="data row4 col2" >30.00</td>
-      <td id="T_61a32_row4_col3" class="data row4 col3" >°C</td>
-    </tr>
-    <tr>
-      <td id="T_61a32_row5_col0" class="data row5 col0" >Température ciel gazeux</td>
-      <td id="T_61a32_row5_col1" class="data row5 col1" ></td>
-      <td id="T_61a32_row5_col2" class="data row5 col2" >30.00</td>
-      <td id="T_61a32_row5_col3" class="data row5 col3" >°C</td>
-    </tr>
-    <tr>
-      <td id="T_61a32_row6_col0" class="data row6 col0" >Nombre d'heure de chauffe</td>
-      <td id="T_61a32_row6_col1" class="data row6 col1" ></td>
-      <td id="T_61a32_row6_col2" class="data row6 col2" >24.00</td>
-      <td id="T_61a32_row6_col3" class="data row6 col3" >h</td>
-    </tr>
-    <tr>
-      <td id="T_61a32_row7_col0" class="data row7 col0" >Epaisseur paroi</td>
-      <td id="T_61a32_row7_col1" class="data row7 col1" >Toiture</td>
-      <td id="T_61a32_row7_col2" class="data row7 col2" >0.50</td>
-      <td id="T_61a32_row7_col3" class="data row7 col3" >cm</td>
-    </tr>
-    <tr>
-      <td id="T_61a32_row8_col0" class="data row8 col0" ></td>
-      <td id="T_61a32_row8_col1" class="data row8 col1" >Mur</td>
-      <td id="T_61a32_row8_col2" class="data row8 col2" >0.50</td>
-      <td id="T_61a32_row8_col3" class="data row8 col3" >cm</td>
-    </tr>
-    <tr>
-      <td id="T_61a32_row9_col0" class="data row9 col0" ></td>
-      <td id="T_61a32_row9_col1" class="data row9 col1" >Sol</td>
-      <td id="T_61a32_row9_col2" class="data row9 col2" >0.50</td>
-      <td id="T_61a32_row9_col3" class="data row9 col3" >cm</td>
-    </tr>
-    <tr>
-      <td id="T_61a32_row10_col0" class="data row10 col0" >Conductivité paroi</td>
-      <td id="T_61a32_row10_col1" class="data row10 col1" ></td>
-      <td id="T_61a32_row10_col2" class="data row10 col2" >0.17</td>
-      <td id="T_61a32_row10_col3" class="data row10 col3" >W/(m/K)</td>
-    </tr>
-    <tr>
-      <td id="T_61a32_row11_col0" class="data row11 col0" >Epaisseur isolant</td>
-      <td id="T_61a32_row11_col1" class="data row11 col1" >Toiture</td>
-      <td id="T_61a32_row11_col2" class="data row11 col2" >5.00</td>
-      <td id="T_61a32_row11_col3" class="data row11 col3" >cm</td>
-    </tr>
-    <tr>
-      <td id="T_61a32_row12_col0" class="data row12 col0" ></td>
-      <td id="T_61a32_row12_col1" class="data row12 col1" >Mur</td>
-      <td id="T_61a32_row12_col2" class="data row12 col2" >15.00</td>
-      <td id="T_61a32_row12_col3" class="data row12 col3" >cm</td>
-    </tr>
-    <tr>
-      <td id="T_61a32_row13_col0" class="data row13 col0" ></td>
-      <td id="T_61a32_row13_col1" class="data row13 col1" >Sol</td>
-      <td id="T_61a32_row13_col2" class="data row13 col2" >15.00</td>
-      <td id="T_61a32_row13_col3" class="data row13 col3" >cm</td>
-    </tr>
-    <tr>
-      <td id="T_61a32_row14_col0" class="data row14 col0" >Conductivité isolant</td>
-      <td id="T_61a32_row14_col1" class="data row14 col1" ></td>
-      <td id="T_61a32_row14_col2" class="data row14 col2" >0.04</td>
-      <td id="T_61a32_row14_col3" class="data row14 col3" >W/(m/K)</td>
-    </tr>
-    <tr>
-      <td id="T_61a32_row15_col0" class="data row15 col0" >Hauteur totale</td>
-      <td id="T_61a32_row15_col1" class="data row15 col1" ></td>
-      <td id="T_61a32_row15_col2" class="data row15 col2" >77.00</td>
-      <td id="T_61a32_row15_col3" class="data row15 col3" >cm</td>
-    </tr>
-    <tr>
-      <td id="T_61a32_row16_col0" class="data row16 col0" >Volume de digestion total</td>
-      <td id="T_61a32_row16_col1" class="data row16 col1" ></td>
-      <td id="T_61a32_row16_col2" class="data row16 col2" >0.27</td>
-      <td id="T_61a32_row16_col3" class="data row16 col3" >m3</td>
-    </tr>
-    <tr>
-      <td id="T_61a32_row17_col0" class="data row17 col0" >Volume de stockage biogaz</td>
-      <td id="T_61a32_row17_col1" class="data row17 col1" ></td>
-      <td id="T_61a32_row17_col2" class="data row17 col2" >0.03</td>
-      <td id="T_61a32_row17_col3" class="data row17 col3" >m3</td>
-    </tr>
-    <tr>
-      <td id="T_61a32_row18_col0" class="data row18 col0" >Surface sol</td>
-      <td id="T_61a32_row18_col1" class="data row18 col1" ></td>
-      <td id="T_61a32_row18_col2" class="data row18 col2" >0.38</td>
-      <td id="T_61a32_row18_col3" class="data row18 col3" >m²</td>
-    </tr>
-    <tr>
-      <td id="T_61a32_row19_col0" class="data row19 col0" >Surface mur-air</td>
-      <td id="T_61a32_row19_col1" class="data row19 col1" ></td>
-      <td id="T_61a32_row19_col2" class="data row19 col2" >1.69</td>
-      <td id="T_61a32_row19_col3" class="data row19 col3" >m²</td>
-    </tr>
-    <tr>
-      <td id="T_61a32_row20_col0" class="data row20 col0" >Surface toiture</td>
-      <td id="T_61a32_row20_col1" class="data row20 col1" ></td>
-      <td id="T_61a32_row20_col2" class="data row20 col2" >0.38</td>
-      <td id="T_61a32_row20_col3" class="data row20 col3" >m²</td>
-    </tr>
-    <tr>
-      <td id="T_61a32_row21_col0" class="data row21 col0" >Resistance thermique sol</td>
-      <td id="T_61a32_row21_col1" class="data row21 col1" ></td>
-      <td id="T_61a32_row21_col2" class="data row21 col2" >1.28</td>
-      <td id="T_61a32_row21_col3" class="data row21 col3" >m².K/W</td>
-    </tr>
-    <tr>
-      <td id="T_61a32_row22_col0" class="data row22 col0" >Resistance thermique mur</td>
-      <td id="T_61a32_row22_col1" class="data row22 col1" ></td>
-      <td id="T_61a32_row22_col2" class="data row22 col2" >1.28</td>
-      <td id="T_61a32_row22_col3" class="data row22 col3" >m².K/W</td>
-    </tr>
-    <tr>
-      <td id="T_61a32_row23_col0" class="data row23 col0" >Resistance thermique toiture</td>
-      <td id="T_61a32_row23_col1" class="data row23 col1" ></td>
-      <td id="T_61a32_row23_col2" class="data row23 col2" >0.50</td>
-      <td id="T_61a32_row23_col3" class="data row23 col3" >m².K/W</td>
-    </tr>
-    <tr>
-      <td id="T_61a32_row24_col0" class="data row24 col0" >Temps de séjour</td>
-      <td id="T_61a32_row24_col1" class="data row24 col1" ></td>
-      <td id="T_61a32_row24_col2" class="data row24 col2" >110.23</td>
-      <td id="T_61a32_row24_col3" class="data row24 col3" >jours</td>
-    </tr>
-    <tr>
-      <td id="T_61a32_row25_col0" class="data row25 col0" >Charge organique</td>
-      <td id="T_61a32_row25_col1" class="data row25 col1" ></td>
-      <td id="T_61a32_row25_col2" class="data row25 col2" >0.85</td>
-      <td id="T_61a32_row25_col3" class="data row25 col3" ></td>
-    </tr>
-  </tbody>
-</table>
-</div></div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">/tmp/ipykernel_253122/3684153403.py</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">pd_df_mef</span><span class="p">(</span><span class="n">info_dig</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;pd_df_mef&#39; is not defined
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="les-informations-techniques">
@@ -686,105 +570,105 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
-#T_3f7a3_row0_col0, #T_3f7a3_row1_col0, #T_3f7a3_row2_col0, #T_3f7a3_row3_col0, #T_3f7a3_row4_col0 {
+#T_fabc9_row0_col0, #T_fabc9_row1_col0, #T_fabc9_row2_col0, #T_fabc9_row3_col0, #T_fabc9_row4_col0 {
   font-weight: ;
   background-color: white;
   color: ;
 }
 </style>
-<table id="T_3f7a3">
+<table id="T_fabc9">
   <thead>
     <tr>
-      <th id="T_3f7a3_level0_col0" class="col_heading level0 col0" >En °C</th>
-      <th id="T_3f7a3_level0_col1" class="col_heading level0 col1" >Janvier</th>
-      <th id="T_3f7a3_level0_col2" class="col_heading level0 col2" >Février</th>
-      <th id="T_3f7a3_level0_col3" class="col_heading level0 col3" >Mars</th>
-      <th id="T_3f7a3_level0_col4" class="col_heading level0 col4" >Avril</th>
-      <th id="T_3f7a3_level0_col5" class="col_heading level0 col5" >Mai</th>
-      <th id="T_3f7a3_level0_col6" class="col_heading level0 col6" >Juin</th>
-      <th id="T_3f7a3_level0_col7" class="col_heading level0 col7" >Juillet</th>
-      <th id="T_3f7a3_level0_col8" class="col_heading level0 col8" >Août</th>
-      <th id="T_3f7a3_level0_col9" class="col_heading level0 col9" >Septembre</th>
-      <th id="T_3f7a3_level0_col10" class="col_heading level0 col10" >Octobre</th>
-      <th id="T_3f7a3_level0_col11" class="col_heading level0 col11" >Novembre</th>
-      <th id="T_3f7a3_level0_col12" class="col_heading level0 col12" >Décembre</th>
+      <th id="T_fabc9_level0_col0" class="col_heading level0 col0" >En °C</th>
+      <th id="T_fabc9_level0_col1" class="col_heading level0 col1" >Janvier</th>
+      <th id="T_fabc9_level0_col2" class="col_heading level0 col2" >Février</th>
+      <th id="T_fabc9_level0_col3" class="col_heading level0 col3" >Mars</th>
+      <th id="T_fabc9_level0_col4" class="col_heading level0 col4" >Avril</th>
+      <th id="T_fabc9_level0_col5" class="col_heading level0 col5" >Mai</th>
+      <th id="T_fabc9_level0_col6" class="col_heading level0 col6" >Juin</th>
+      <th id="T_fabc9_level0_col7" class="col_heading level0 col7" >Juillet</th>
+      <th id="T_fabc9_level0_col8" class="col_heading level0 col8" >Août</th>
+      <th id="T_fabc9_level0_col9" class="col_heading level0 col9" >Septembre</th>
+      <th id="T_fabc9_level0_col10" class="col_heading level0 col10" >Octobre</th>
+      <th id="T_fabc9_level0_col11" class="col_heading level0 col11" >Novembre</th>
+      <th id="T_fabc9_level0_col12" class="col_heading level0 col12" >Décembre</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td id="T_3f7a3_row0_col0" class="data row0 col0" >Temperature à 2m</td>
-      <td id="T_3f7a3_row0_col1" class="data row0 col1" >5.6</td>
-      <td id="T_3f7a3_row0_col2" class="data row0 col2" >5.3</td>
-      <td id="T_3f7a3_row0_col3" class="data row0 col3" >6.5</td>
-      <td id="T_3f7a3_row0_col4" class="data row0 col4" >9.7</td>
-      <td id="T_3f7a3_row0_col5" class="data row0 col5" >13.5</td>
-      <td id="T_3f7a3_row0_col6" class="data row0 col6" >18.3</td>
-      <td id="T_3f7a3_row0_col7" class="data row0 col7" >21.6</td>
-      <td id="T_3f7a3_row0_col8" class="data row0 col8" >21.3</td>
-      <td id="T_3f7a3_row0_col9" class="data row0 col9" >18.5</td>
-      <td id="T_3f7a3_row0_col10" class="data row0 col10" >11.5</td>
-      <td id="T_3f7a3_row0_col11" class="data row0 col11" >7.7</td>
-      <td id="T_3f7a3_row0_col12" class="data row0 col12" >5.2</td>
+      <td id="T_fabc9_row0_col0" class="data row0 col0" >Temperature à 2m</td>
+      <td id="T_fabc9_row0_col1" class="data row0 col1" >5.6</td>
+      <td id="T_fabc9_row0_col2" class="data row0 col2" >5.3</td>
+      <td id="T_fabc9_row0_col3" class="data row0 col3" >6.5</td>
+      <td id="T_fabc9_row0_col4" class="data row0 col4" >9.7</td>
+      <td id="T_fabc9_row0_col5" class="data row0 col5" >13.5</td>
+      <td id="T_fabc9_row0_col6" class="data row0 col6" >18.3</td>
+      <td id="T_fabc9_row0_col7" class="data row0 col7" >21.6</td>
+      <td id="T_fabc9_row0_col8" class="data row0 col8" >21.3</td>
+      <td id="T_fabc9_row0_col9" class="data row0 col9" >18.5</td>
+      <td id="T_fabc9_row0_col10" class="data row0 col10" >11.5</td>
+      <td id="T_fabc9_row0_col11" class="data row0 col11" >7.7</td>
+      <td id="T_fabc9_row0_col12" class="data row0 col12" >5.2</td>
     </tr>
     <tr>
-      <td id="T_3f7a3_row1_col0" class="data row1 col0" >Temperature sous-sol</td>
-      <td id="T_3f7a3_row1_col1" class="data row1 col1" >15.6</td>
-      <td id="T_3f7a3_row1_col2" class="data row1 col2" >15.3</td>
-      <td id="T_3f7a3_row1_col3" class="data row1 col3" >16.5</td>
-      <td id="T_3f7a3_row1_col4" class="data row1 col4" >19.7</td>
-      <td id="T_3f7a3_row1_col5" class="data row1 col5" >19.7</td>
-      <td id="T_3f7a3_row1_col6" class="data row1 col6" >19.7</td>
-      <td id="T_3f7a3_row1_col7" class="data row1 col7" >19.7</td>
-      <td id="T_3f7a3_row1_col8" class="data row1 col8" >19.7</td>
-      <td id="T_3f7a3_row1_col9" class="data row1 col9" >19.7</td>
-      <td id="T_3f7a3_row1_col10" class="data row1 col10" >19.7</td>
-      <td id="T_3f7a3_row1_col11" class="data row1 col11" >17.7</td>
-      <td id="T_3f7a3_row1_col12" class="data row1 col12" >15.2</td>
+      <td id="T_fabc9_row1_col0" class="data row1 col0" >Temperature sous-sol</td>
+      <td id="T_fabc9_row1_col1" class="data row1 col1" >15.6</td>
+      <td id="T_fabc9_row1_col2" class="data row1 col2" >15.3</td>
+      <td id="T_fabc9_row1_col3" class="data row1 col3" >16.5</td>
+      <td id="T_fabc9_row1_col4" class="data row1 col4" >19.7</td>
+      <td id="T_fabc9_row1_col5" class="data row1 col5" >19.7</td>
+      <td id="T_fabc9_row1_col6" class="data row1 col6" >19.7</td>
+      <td id="T_fabc9_row1_col7" class="data row1 col7" >19.7</td>
+      <td id="T_fabc9_row1_col8" class="data row1 col8" >19.7</td>
+      <td id="T_fabc9_row1_col9" class="data row1 col9" >19.7</td>
+      <td id="T_fabc9_row1_col10" class="data row1 col10" >19.7</td>
+      <td id="T_fabc9_row1_col11" class="data row1 col11" >17.7</td>
+      <td id="T_fabc9_row1_col12" class="data row1 col12" >15.2</td>
     </tr>
     <tr>
-      <td id="T_3f7a3_row2_col0" class="data row2 col0" >Dejection humaine</td>
-      <td id="T_3f7a3_row2_col1" class="data row2 col1" >3.6</td>
-      <td id="T_3f7a3_row2_col2" class="data row2 col2" >3.3</td>
-      <td id="T_3f7a3_row2_col3" class="data row2 col3" >4.5</td>
-      <td id="T_3f7a3_row2_col4" class="data row2 col4" >7.7</td>
-      <td id="T_3f7a3_row2_col5" class="data row2 col5" >11.5</td>
-      <td id="T_3f7a3_row2_col6" class="data row2 col6" >17.0</td>
-      <td id="T_3f7a3_row2_col7" class="data row2 col7" >17.0</td>
-      <td id="T_3f7a3_row2_col8" class="data row2 col8" >3.6</td>
-      <td id="T_3f7a3_row2_col9" class="data row2 col9" >3.3</td>
-      <td id="T_3f7a3_row2_col10" class="data row2 col10" >4.5</td>
-      <td id="T_3f7a3_row2_col11" class="data row2 col11" >7.7</td>
-      <td id="T_3f7a3_row2_col12" class="data row2 col12" >11.5</td>
+      <td id="T_fabc9_row2_col0" class="data row2 col0" >Dejection humaine</td>
+      <td id="T_fabc9_row2_col1" class="data row2 col1" >3.6</td>
+      <td id="T_fabc9_row2_col2" class="data row2 col2" >3.3</td>
+      <td id="T_fabc9_row2_col3" class="data row2 col3" >4.5</td>
+      <td id="T_fabc9_row2_col4" class="data row2 col4" >7.7</td>
+      <td id="T_fabc9_row2_col5" class="data row2 col5" >11.5</td>
+      <td id="T_fabc9_row2_col6" class="data row2 col6" >17.0</td>
+      <td id="T_fabc9_row2_col7" class="data row2 col7" >17.0</td>
+      <td id="T_fabc9_row2_col8" class="data row2 col8" >3.6</td>
+      <td id="T_fabc9_row2_col9" class="data row2 col9" >3.3</td>
+      <td id="T_fabc9_row2_col10" class="data row2 col10" >4.5</td>
+      <td id="T_fabc9_row2_col11" class="data row2 col11" >7.7</td>
+      <td id="T_fabc9_row2_col12" class="data row2 col12" >11.5</td>
     </tr>
     <tr>
-      <td id="T_3f7a3_row3_col0" class="data row3 col0" >Epluchure</td>
-      <td id="T_3f7a3_row3_col1" class="data row3 col1" >3.6</td>
-      <td id="T_3f7a3_row3_col2" class="data row3 col2" >3.3</td>
-      <td id="T_3f7a3_row3_col3" class="data row3 col3" >4.5</td>
-      <td id="T_3f7a3_row3_col4" class="data row3 col4" >7.7</td>
-      <td id="T_3f7a3_row3_col5" class="data row3 col5" >11.5</td>
-      <td id="T_3f7a3_row3_col6" class="data row3 col6" >17.0</td>
-      <td id="T_3f7a3_row3_col7" class="data row3 col7" >17.0</td>
-      <td id="T_3f7a3_row3_col8" class="data row3 col8" >3.6</td>
-      <td id="T_3f7a3_row3_col9" class="data row3 col9" >3.3</td>
-      <td id="T_3f7a3_row3_col10" class="data row3 col10" >4.5</td>
-      <td id="T_3f7a3_row3_col11" class="data row3 col11" >7.7</td>
-      <td id="T_3f7a3_row3_col12" class="data row3 col12" >11.5</td>
+      <td id="T_fabc9_row3_col0" class="data row3 col0" >Epluchure</td>
+      <td id="T_fabc9_row3_col1" class="data row3 col1" >3.6</td>
+      <td id="T_fabc9_row3_col2" class="data row3 col2" >3.3</td>
+      <td id="T_fabc9_row3_col3" class="data row3 col3" >4.5</td>
+      <td id="T_fabc9_row3_col4" class="data row3 col4" >7.7</td>
+      <td id="T_fabc9_row3_col5" class="data row3 col5" >11.5</td>
+      <td id="T_fabc9_row3_col6" class="data row3 col6" >17.0</td>
+      <td id="T_fabc9_row3_col7" class="data row3 col7" >17.0</td>
+      <td id="T_fabc9_row3_col8" class="data row3 col8" >3.6</td>
+      <td id="T_fabc9_row3_col9" class="data row3 col9" >3.3</td>
+      <td id="T_fabc9_row3_col10" class="data row3 col10" >4.5</td>
+      <td id="T_fabc9_row3_col11" class="data row3 col11" >7.7</td>
+      <td id="T_fabc9_row3_col12" class="data row3 col12" >11.5</td>
     </tr>
     <tr>
-      <td id="T_3f7a3_row4_col0" class="data row4 col0" >Eaux usées</td>
-      <td id="T_3f7a3_row4_col1" class="data row4 col1" >3.6</td>
-      <td id="T_3f7a3_row4_col2" class="data row4 col2" >3.3</td>
-      <td id="T_3f7a3_row4_col3" class="data row4 col3" >4.5</td>
-      <td id="T_3f7a3_row4_col4" class="data row4 col4" >7.7</td>
-      <td id="T_3f7a3_row4_col5" class="data row4 col5" >11.5</td>
-      <td id="T_3f7a3_row4_col6" class="data row4 col6" >17.0</td>
-      <td id="T_3f7a3_row4_col7" class="data row4 col7" >17.0</td>
-      <td id="T_3f7a3_row4_col8" class="data row4 col8" >3.6</td>
-      <td id="T_3f7a3_row4_col9" class="data row4 col9" >3.3</td>
-      <td id="T_3f7a3_row4_col10" class="data row4 col10" >4.5</td>
-      <td id="T_3f7a3_row4_col11" class="data row4 col11" >7.7</td>
-      <td id="T_3f7a3_row4_col12" class="data row4 col12" >11.5</td>
+      <td id="T_fabc9_row4_col0" class="data row4 col0" >Eaux usées</td>
+      <td id="T_fabc9_row4_col1" class="data row4 col1" >3.6</td>
+      <td id="T_fabc9_row4_col2" class="data row4 col2" >3.3</td>
+      <td id="T_fabc9_row4_col3" class="data row4 col3" >4.5</td>
+      <td id="T_fabc9_row4_col4" class="data row4 col4" >7.7</td>
+      <td id="T_fabc9_row4_col5" class="data row4 col5" >11.5</td>
+      <td id="T_fabc9_row4_col6" class="data row4 col6" >17.0</td>
+      <td id="T_fabc9_row4_col7" class="data row4 col7" >17.0</td>
+      <td id="T_fabc9_row4_col8" class="data row4 col8" >3.6</td>
+      <td id="T_fabc9_row4_col9" class="data row4 col9" >3.3</td>
+      <td id="T_fabc9_row4_col10" class="data row4 col10" >4.5</td>
+      <td id="T_fabc9_row4_col11" class="data row4 col11" >7.7</td>
+      <td id="T_fabc9_row4_col12" class="data row4 col12" >11.5</td>
     </tr>
   </tbody>
 </table>
@@ -797,8 +681,8 @@ title="Print to PDF"
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "konsilion/MethaConcept",
+            ref: "dev",
         },
         codeMirrorConfig: {
             theme: "abcdef",

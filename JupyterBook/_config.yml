@@ -1,7 +1,7 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: My sample book
+title: MethaConcept
 author: Nicolas Brémond
 copyright: "Licence juridique Creative Commons CC-BY-SA"  # Copyright year to be placed in the footer
 logo: docs/logo.png
@@ -22,12 +22,15 @@ bibtex_bibfiles:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/<usr-name>/<repo-name>  # Online location of your book
+  url: https://github.com/konsilion/MethaConcept  # Online location of your book
   path_to_book: JupyterBook  # Optional path to your book, relative to the repository root
-  branch: master  # Which branch of the repository should be used when creating links (optional)
+  branch: dev  # Which branch of the repository should be used when creating links (optional)
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
   use_issues_button: true
   use_repository_button: true
+  
+launch_buttons:
+  thebe: true

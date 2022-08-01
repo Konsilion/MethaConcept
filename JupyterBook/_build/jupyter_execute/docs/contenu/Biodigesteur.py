@@ -5,18 +5,54 @@
 # 
 # Ce document est régi par les termes de la licence juridique [Creative Commons CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr) 
 # 
+# :::{tip} To auto-exclude all files outside of your table of contents, see :::
+# 
+# :::{seealso} and . :::
+# 
+# :::{important} The default behaviour of cache is now to run in the local directory. This is a change from v0.7. :::
+# 
+# 
+# 
 # ---
 
+# * Pour commencer, téléchargez le tableur
+
 # In[1]:
-
-
-filename = r'./Analyse_TechnicoEconomique.xlsx'
 
 
 # Import des donnees calc
 
 import pandas as pd
 import numpy as np
+import ipywidgets as widgets
+
+
+# [Lien de téléchargements WEB](https://konsilion.fr/wp/wp-content/uploads/2022/07/MetaConcept.xlsx)
+
+# ---
+# 
+# 2. Une fois le tableur remplis, vous pouvez le reverser dans la machine.
+
+# In[2]:
+
+
+uploader = widgets.FileUpload(
+    accept='.xlsx',  # Accepted file extension e.g. '.txt', '.pdf', 'image/*', 'image/*,.pdf'
+    multiple=False  # True to accept multiple files upload else False
+)
+
+display(uploader)
+
+
+
+# In[3]:
+
+
+uploaded_file = uploader.value['MetaConcept.xlsx']
+
+
+# In[11]:
+
 
 # pd.set_option('display.float_format', '{:.1f}'.format)
 
@@ -64,7 +100,7 @@ def pd_df_mef(df,nb_round):
 # 
 # Nous vous présentons ici les différents intrants que vous avez selectionné ainsi que leurs caractéristiques :
 
-# In[2]:
+# In[6]:
 
 
 pd_df_mef(tab_intrant,2)
@@ -74,7 +110,7 @@ pd_df_mef(tab_intrant,2)
 # 
 # Retrouvez ici les informations propres aux digesteurs :
 
-# In[3]:
+# In[7]:
 
 
 pd_df_mef(info_dig,2)
@@ -84,8 +120,14 @@ pd_df_mef(info_dig,2)
 # 
 # Ici les informations techniques :
 
-# In[4]:
+# In[15]:
 
 
 pd_df_mef(tab_temperature,1)
+
+
+# In[ ]:
+
+
+
 

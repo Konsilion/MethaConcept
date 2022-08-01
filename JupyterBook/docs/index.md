@@ -4,7 +4,7 @@ hide:
   - toc
 ---
 
-# **Rassembler et diffusez toutes vos documentations scientifiques.**
+# **MethaConcept - Methanisation domestique**
 
 *L'outil Konnect vous simplifiera la vie pour créer vos documentations, rapports, etc.*
 
